@@ -17,11 +17,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Gerador de número',
-          // style: GoogleFonts.boogaloo()
-        ),
-      ),
+          title: const Text(
+            'Gerador de número',
+            // style: GoogleFonts.boogaloo()
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.info),
+              tooltip: 'Show Snackbar',
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Versão do app: v1.0.0')));
+              },
+            ),
+          ]),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Column(
@@ -43,17 +52,69 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white
-                    ),
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white),
                     child: const Text("Resetar"),
                   )
                 ],
               ),
               Text(
                 "Número gerado: $randomNumber",
-                style: GoogleFonts.roboto(fontSize: 25, fontWeight: FontWeight.bold),
+                style: GoogleFonts.roboto(
+                    fontSize: 25, fontWeight: FontWeight.bold),
               ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(5),
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            
+                          });
+                        },
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white),
+                        child: const Text("Botão 1"),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(5),
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            
+                          });
+                        },
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white),
+                        child: const Text("Botão 2"),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(5),
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            
+                          });
+                        },
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white),
+                        child: const Text("Botão 3"),
+                      ),
+                    ),
+                  )
+                ],
+              )
             ]),
       ),
       floatingActionButton: FloatingActionButton(
