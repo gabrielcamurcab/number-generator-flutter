@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Meu app'),
+        title: const Text('Gerador de número'),
       ),
       body: Center(child: Text(randomNumber.toString())),
       floatingActionButton: FloatingActionButton(
