@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var randomNumber = 0;
+  var clicksCount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +22,44 @@ class _HomePageState extends State<HomePage> {
           // style: GoogleFonts.boogaloo()
         ),
       ),
-      body: Center(
-          child: Text(
-        randomNumber.toString(),
-        style: GoogleFonts.boogaloo(fontSize: 45),
-      )),
+      body: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Foi clicado $clicksCount vezes",
+                    style: GoogleFonts.boogaloo(fontSize: 25),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      setState(() {
+                        randomNumber = 0;
+                        clicksCount = 0;
+                      });
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white
+                    ),
+                    child: const Text("Resetar"),
+                  )
+                ],
+              ),
+              Text(
+                "Número gerado: $randomNumber",
+                style: GoogleFonts.boogaloo(fontSize: 40),
+              ),
+            ]),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
+            clicksCount = clicksCount + 1;
             randomNumber =
                 RandomNumberGenerateService.randomNumberGenerate(10000);
           });
