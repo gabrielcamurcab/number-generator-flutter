@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.blue,
                             foregroundColor: Colors.white),
-                        child: const Text("Botão 1"),
+                        child: const Text("Login"),
                       ),
                     ),
                   ),
@@ -91,28 +91,12 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            foregroundColor: Colors.white),
-                        child: const Text("Botão 2"),
+                            backgroundColor: Colors.blueGrey[100],
+                            foregroundColor: Colors.blue),
+                        child: const Text("Cadastro"),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(5),
-                      child: TextButton(
-                        onPressed: () {
-                          setState(() {
-                            
-                          });
-                        },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            foregroundColor: Colors.white),
-                        child: const Text("Botão 3"),
-                      ),
-                    ),
-                  )
                 ],
               )
             ]),
