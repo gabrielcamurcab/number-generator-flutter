@@ -15,9 +15,8 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
               color: Colors.blue,
               foregroundColor: Colors.white,
-              titleTextStyle: GoogleFonts.boogaloo(fontSize: 25),
-              centerTitle: true),
-          textTheme: GoogleFonts.boogalooTextTheme()),
+              titleTextStyle: GoogleFonts.roboto(fontSize: 20),),
+          textTheme: GoogleFonts.robotoTextTheme()),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );

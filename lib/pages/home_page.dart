@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     "Foi clicado $clicksCount vezes",
-                    style: GoogleFonts.boogaloo(fontSize: 25),
+                    style: GoogleFonts.roboto(fontSize: 20),
                   ),
                   TextButton(
                     onPressed: () {
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(
                 "Número gerado: $randomNumber",
-                style: GoogleFonts.boogaloo(fontSize: 40),
+                style: GoogleFonts.roboto(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ]),
       ),
