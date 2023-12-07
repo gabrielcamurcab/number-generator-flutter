@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:trilhaapp/service/random_number_generate_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,9 +16,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Gerador de número'),
+        title: const Text(
+          'Gerador de número',
+          // style: GoogleFonts.boogaloo()
+        ),
       ),
-      body: Center(child: Text(randomNumber.toString())),
+      body: Center(
+          child: Text(
+        randomNumber.toString(),
+        style: GoogleFonts.boogaloo(fontSize: 45),
+      )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {

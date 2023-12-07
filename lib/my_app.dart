@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
 
@@ -11,8 +12,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           primaryColor: Colors.blue,
-          appBarTheme: const AppBarTheme(
-              color: Colors.blue, foregroundColor: Colors.white)),
+          appBarTheme: AppBarTheme(
+              color: Colors.blue,
+              foregroundColor: Colors.white,
+              titleTextStyle: GoogleFonts.boogaloo(fontSize: 25),
+              centerTitle: true),
+          textTheme: GoogleFonts.boogalooTextTheme()),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
