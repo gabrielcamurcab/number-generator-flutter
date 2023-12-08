@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           primaryColor: Colors.blue,
           appBarTheme: AppBarTheme(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 151, 71, 200),
               foregroundColor: Colors.white,
               titleTextStyle: GoogleFonts.roboto(fontSize: 20),),
           textTheme: GoogleFonts.robotoTextTheme()),
